@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript">
+  function compute1() {
+    var a = $("#startpointer1").val();
+    var b = $("#endpointer1").val();
+
+    var p1 = Math.pow(a, 0.382) * Math.pow(b, 0.618);
+    var p2 = Math.pow(a * b, 0.5);
+    var p3 = Math.pow(a, 0.618) * Math.pow(b, 0.382);
+
+    var html = [
+      `<p>上升区间[${a}---${b}]的回调P1：${p1.toFixed(3)}</p>`,
+      `<p>上升区间[${a}---${b}]的回调P2：${p2.toFixed(3)}</p>`,
+      `<p>上升区间[${a}---${b}]的回调P3：${p3.toFixed(3)}</p>`
+    ]
+
+    $("#footer h1").html(html);
+  }
+
+  function compute2() {
+    var a = $("#startpointer2").val();
+    var b = $("#endpointer2").val();
+
+    var p1 = Math.pow(a, 0.382) * Math.pow(b, 0.618);
+    var p2 = Math.pow(a * b, 0.5);
+    var p3 = Math.pow(a, 0.618) * Math.pow(b, 0.382);
+
+    var html = [
+      `<p>下降区间[${a}---${b}]的反弹P1：${p1.toFixed(3)}</p>`,
+      `<p>下降区间[${a}---${b}]的反弹P2：${p2.toFixed(3)}</p>`,
+      `<p>下降区间[${a}---${b}]的反弹P3：${p3.toFixed(3)}</p>`
+    ]
+
+    $("#footer h1").html(html);
+  }
+
+  function compute3() {
+    var a = $("#startpointer3").val();
+    var b = $("#endpointer3").val();
+    var c = $("#reversepointer3").val();
+
+    var p1 = Math.pow(a, 0.382) * Math.pow(b, 0.618);
+    var p2 = Math.pow(a * b, 0.5);
+    var p3 = Math.pow(a, 0.618) * Math.pow(b, 0.382);
+
+
+    var p1 = Math.pow(b / a, 0.382) * c;
+    var p2 = Math.pow(b / a, 0.618) * c;
+    var p3 = Math.pow(b / a, 1) * c;
+    var p4 = Math.pow(b / a, 1.618) * c;
+    var p5 = Math.pow(b / a, 2.618) * c;
+
+    var html = [
+      `<p>上升波浪[${a}---${b}---${c}]的高点P1：${p1.toFixed(3)}</p>`,
+      `<p>上升波浪[${a}---${b}---${c}]的高点P2：${p2.toFixed(3)}</p>`,
+      `<p>上升波浪[${a}---${b}---${c}]的高点P3：${p3.toFixed(3)}</p>`,
+      `<p>上升波浪[${a}---${b}---${c}]的高点P4：${p4.toFixed(3)}</p>`,
+      `<p>上升波浪[${a}---${b}---${c}]的高点P5：${p5.toFixed(3)}</p>`
+    ]
+
+    $("#footer h1").html(html);
+  }
+
+
+  function compute4() {
+    var a = $("#startpointer4").val();
+    var b = $("#endpointer4").val();
+    var c = $("#reversepointer4").val();
+
+    var p1 = Math.pow(a, 0.382) * Math.pow(b, 0.618);
+    var p2 = Math.pow(a * b, 0.5);
+    var p3 = Math.pow(a, 0.618) * Math.pow(b, 0.382);
+
+
+    var p1 = Math.pow(b / a, 0.382) * c;
+    var p2 = Math.pow(b / a, 0.618) * c;
+    var p3 = Math.pow(b / a, 1) * c;
+    var p4 = Math.pow(b / a, 1.618) * c;
+    var p5 = Math.pow(b / a, 2.618) * c;
+
+    var html = [
+      `<p>下降波浪[${a}---${b}---${c}]的高点P1：${p1.toFixed(3)}</p>`,
+      `<p>下降波浪[${a}---${b}---${c}]的高点P2：${p2.toFixed(3)}</p>`,
+      `<p>下降波浪[${a}---${b}---${c}]的高点P3：${p3.toFixed(3)}</p>`,
+      `<p>下降波浪[${a}---${b}---${c}]的高点P4：${p4.toFixed(3)}</p>`,
+      `<p>下降波浪[${a}---${b}---${c}]的高点P5：${p5.toFixed(3)}</p>`
+    ]
+
+    $("#footer h1").html(html);
+
+  }
+
+  function switch1() {
+    $("#tab1").css('display', '');
+    $("#tab2").css('display', 'none');
+    $("#tab3").css('display', 'none');
+    $("#tab4").css('display', 'none');
+  }
+
+  function switch2() {
+    $("#tab1").css('display', 'none');
+    $("#tab2").css('display', '');
+    $("#tab3").css('display', 'none');
+    $("#tab4").css('display', 'none');
+  }
+
+  function switch3() {
+    $("#tab1").css('display', 'none');
+    $("#tab2").css('display', 'none');
+    $("#tab3").css('display', '');
+    $("#tab4").css('display', 'none');
+  }
+
+  function switch4() {
+    $("#tab1").css('display', 'none');
+    $("#tab2").css('display', 'none');
+    $("#tab3").css('display', 'none');
+    $("#tab4").css('display', '');
+  }
+
+</script>
+</head>
+<body>
+<div data-role="page" id="pageone">
+  <div data-role="header">
+    <h1>计算工具</h1>
+    <div data-role="navbar" data-iconpos="left">
+      <ul>
+        <li><a href="#" class="ui-btn-active" onclick="switch1()">上升回调</a></li>
+        <li><a href="#" onclick="switch2()">下降反弹</a></li>
+        <li><a href="#" onclick="switch3()">上升波浪</a></li>
+        <li><a href="#" onclick="switch4()">下降波浪</a></li>
+      </ul>
+    </div>
+  </div>
+ 
+
+  <div data-role="main" class="ui-content" id="tab1">
+    <div class="ui-field-contain">
+      <label for="startpointer1">低点：</label>
+      <input type="text" name="startpointer1" id="startpointer1">
+      <label for="endpointer1">高点：</label>
+      <input type="text" name="endpointer1" id="endpointer1">
+
+      <input type="button" data-inline="true" value="提交" onclick="compute1()">
+    </div>
+  </div>
+
+  <div data-role="main" class="ui-content" id="tab2" style="display:none;">
+    <div class="ui-field-contain">
+      <label for="startpointer2">高点：</label>
+      <input type="text" name="startpointer2" id="startpointer2">
+      <label for="endpointer2">低点：</label>
+      <input type="text" name="endpointer2" id="endpointer2">
+
+      <input type="button" data-inline="true" value="提交" onclick="compute2()">
+    </div>
+  </div>
+
+  <div data-role="main" class="ui-content" id="tab3" style="display:none;">
+    <div class="ui-field-contain">
+      <label for="startpointer3">低点：</label>
+      <input type="text" name="startpointer3" id="startpointer3">
+      <label for="endpointer3">高点：</label>
+      <input type="text" name="endpointer3" id="endpointer3">
+      <label for="reversepointer3">低点：</label>
+      <input type="text" name="reversepointer3" id="reversepointer3">
+
+      <input type="button" data-inline="true" value="提交" onclick="compute3()">
+    </div>
+  </div>
+
+  <div data-role="main" class="ui-content" id="tab4" style="display:none;">
+    <div class="ui-field-contain">
+      <label for="startpointer4">高点：</label>
+      <input type="text" name="startpointer4" id="startpointer4">
+      <label for="endpointer4">低点：</label>
+      <input type="text" name="endpointer4" id="endpointer4">
+      <label for="reversepointer4">高点：</label>
+      <input type="text" name="reversepointer4" id="reversepointer4">
+
+      <input type="button" data-inline="true" value="提交" onclick="compute4()">
+    </div>
+  </div>
+
+  <div data-role="footer" id="footer">
+    <h1><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p></h1>
+  </div>
+</div> 
+
+</body>
+</html>
